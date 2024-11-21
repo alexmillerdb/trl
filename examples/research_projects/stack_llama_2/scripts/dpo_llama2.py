@@ -122,6 +122,7 @@ def get_stack_exchange_paired(
         split="train",
         cache_dir=cache_dir,
         data_dir=data_dir,
+        trust_remote_code=True,
         verification_mode="no_checks",
     )
     original_columns = dataset.column_names
