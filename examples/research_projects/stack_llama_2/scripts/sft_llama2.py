@@ -45,7 +45,7 @@ class ScriptArguments:
     size_valid_set: Optional[int] = field(default=4000, metadata={"help": "the size of the validation set"})
     streaming: Optional[bool] = field(default=True, metadata={"help": "whether to stream the dataset"})
     shuffle_buffer: Optional[int] = field(default=5000, metadata={"help": "the shuffle buffer size"})
-    max_seq_length: Optional[int] = field(default=1024, metadata={"help": "the sequence length"})
+    # max_seq_length: Optional[int] = field(default=1024, metadata={"help": "the sequence length"})
     num_workers: Optional[int] = field(default=4, metadata={"help": "the number of workers"})
     use_bnb: Optional[bool] = field(default=True, metadata={"help": "whether to use BitsAndBytes"})
 
