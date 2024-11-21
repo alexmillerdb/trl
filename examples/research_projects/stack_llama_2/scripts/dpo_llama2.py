@@ -235,13 +235,13 @@ if __name__ == "__main__":
         model,
         ref_model=None,
         args=training_args,
-        beta=script_args.beta,
+        # beta=script_args.beta,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
         processing_class=tokenizer,
         peft_config=peft_config,
-        max_prompt_length=script_args.max_prompt_length,
-        max_length=script_args.max_length,
+        # max_prompt_length=script_args.max_prompt_length,
+        # max_length=script_args.max_length,
     )
 
     # 6. train
