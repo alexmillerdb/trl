@@ -142,7 +142,7 @@ def create_datasets(tokenizer, args, seed=None):
         train_data,
         formatting_func=prepare_sample_text,
         infinite=True,
-        seq_length=args.seq_length,
+        seq_length=1024,
         chars_per_token=chars_per_token,
     )
     valid_dataset = ConstantLengthDataset(
@@ -150,7 +150,8 @@ def create_datasets(tokenizer, args, seed=None):
         valid_data,
         formatting_func=prepare_sample_text,
         infinite=False,
-        seq_length=args.seq_length,
+        seq_length=1024,
+        # seq_length=args.seq_length,
         chars_per_token=chars_per_token,
     )
     return train_dataset, valid_dataset
@@ -185,6 +186,7 @@ trainer = SFTTrainer(
     train_dataset=train_dataset,
     eval_dataset=eval_dataset,
     peft_config=peft_config,
+    max_seq_length=1024,
     # max_seq_length=None,
     formatting_func=prepare_sample_text,
     processing_class=tokenizer,
