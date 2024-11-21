@@ -8,6 +8,8 @@ deepspeed_config:
   zero3_init_flag: false
   zero_stage: 2
   stage3_gather_16bit_weights_on_model_save: true
+  bf16: 
+    enabled: "auto"
 distributed_type: DEEPSPEED
 downcast_bf16: 'no'
 machine_rank: 0
